@@ -20,27 +20,27 @@ export default function Navbar() {
         <li>
           <span>회사소개</span>
           <SubMenu>
-            <a>회사소개</a>
-            <a>협력사 소개</a>
-            <a>고객사 소개</a>
-            <a>오시는 길</a>
+            <a href="/">회사소개</a>
+            <a href="/">협력사 소개</a>
+            <a href="/">고객사 소개</a>
+            <a href="/">오시는 길</a>
           </SubMenu>
         </li>
         <li>
           <span>사업소개</span>
           <SubMenu>
-            <a>새벽배송</a>
-            <a>화물주선</a>
-            <a>풀필먼트</a>
-            <a>그로서리</a>
+            <a href="/">새벽배송</a>
+            <a href="/">화물주선</a>
+            <a href="/">풀필먼트</a>
+            <a href="/">그로서리</a>
           </SubMenu>
         </li>
         <li>
           <span>공지사항</span>
           <SubMenu>
-            <a>공지사항</a>
-            <a>인재채용</a>
-            <a>서비스소개</a>
+            <a href="/">공지사항</a>
+            <a href="/">인재채용</a>
+            <a href="/">서비스소개</a>
           </SubMenu>
         </li>
         <li>
@@ -70,8 +70,6 @@ const Container = styled.div`
   @media screen and (max-width: 993px) {
     flex-direction: column;
     align-items: flex-start;
-    /* gap: 2rem; */
-    /* justify-content: center; */
   }
 `;
 
@@ -83,15 +81,8 @@ const NavMenuContainer = styled.ul`
   font-weight: 500;
   font-size: 0.9rem;
 
-  @media screen and (max-width: 993px) {
-    width: 100%;
-    background-color: #f8f9fa;
-    flex-direction: column;
-    padding: 20px;
-    gap: 1rem;
-    display: ${({ isClicked }) => (isClicked ? "flex" : "none")};
-  }
   li {
+    padding: 10px;
     position: relative;
   }
   li:hover > div {
@@ -104,6 +95,18 @@ const NavMenuContainer = styled.ul`
   li > span:hover {
     font-weight: bold;
     color: black;
+  }
+
+  @media screen and (max-width: 993px) {
+    width: 100%;
+    background-color: #f8f9fa;
+    flex-direction: column;
+    padding: 20px;
+    gap: 1rem;
+    display: ${({ isClicked }) => (isClicked ? "flex" : "none")};
+    li {
+      padding: 0px;
+    }
   }
 `;
 
@@ -136,8 +139,12 @@ const NavBtn = styled.button`
 const SubMenu = styled.div`
   @media screen and (min-width: 993px) {
     position: absolute;
-    width: 260%;
-    top: 22px;
+    width: 200%;
+    top: 42px;
+    left: -50%;
+    a {
+      text-align: center;
+    }
   }
   width: 100%;
   background-color: rgb(241 241 241);
