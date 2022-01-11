@@ -16,16 +16,16 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
     @media screen and (max-width: 993px) {
       font-size: 1.8rem;
     }
     @media screen and (max-width: 769px) {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
   h2 {
-    font-size: 2.3rem;
+    font-size: 2rem;
     @media screen and (max-width: 993px) {
       font-size: 1.3rem;
     }

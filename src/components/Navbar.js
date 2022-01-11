@@ -47,7 +47,7 @@ export default function Navbar() {
           <span>보도자료</span>
         </li>
         <li>
-          <span>테스트</span>
+          <a href="/searchDelivery">배송지역검색</a>
         </li>
       </NavMenuContainer>
     </Container>

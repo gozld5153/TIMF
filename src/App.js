@@ -1,17 +1,15 @@
-import styled from "styled-components";
-
-import Navbar from "./components/Navbar";
-import Slide from "./components/Slide";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Main from "./page/Main";
+import SearchDelivery from "./page/SearchDelivery";
 function App() {
   return (
-    <Container>
-      <Navbar />
-      <Slide />
-    </Container>
+    <Router>
+      <Routes>
+        <Route path="searchDelivery" element={<SearchDelivery />} />
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </Router>
   );
 }
-
-const Container = styled.div``;
 
 export default App;
